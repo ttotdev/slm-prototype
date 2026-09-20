@@ -7,6 +7,16 @@ log extraction.
 The repository intentionally does not contain model weights. Model files are
 downloaded or generated locally and are ignored by Git.
 
+## Architectural Scope & Use Case
+
+This repository implements a zero-cloud, deterministic compliance and legal rule-checking harness running locally on Apple Silicon.
+
+* **The Use Case:** The system evaluates complex, composite legal and operational scenarios against strict statutory constraints. Because this is a high-stakes governance domain, continuous training loss metrics are insufficient; success is defined entirely by discrete classification accuracy—specifically minimizing Type II errors (false negatives where severe violations slip through).
+* **Source Grounding & Truthfulness:** To prevent hallucinations in a legal domain, the model’s outputs (`PASS`/`FAIL` and `rationale`) are strictly constrained via Pydantic schemas and trained via LoRA to anchor reasoning solely to the provided policy text.
+* **Evaluation Governance:** The pipeline decouples low-level optimization from release governance, utilizing a multi-layered evaluation gate:
+  1. **Tuning Layer:** Measured via training loss and adapter convergence.
+  2. **Release Layer:** Governed by our 15+ case golden benchmark, tracking a Confusion Matrix and Cohen’s Kappa ($\kappa$) to measure true inter-rater agreement against human baselines while correcting for random chance.
+
 ## Requirements
 
 - macOS with Apple Silicon recommended for MLX

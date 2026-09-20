@@ -1,0 +1,92 @@
+[
+  {
+    "id": "TC-01",
+    "policy": "Transfers above $10,000 require two-manager approval.",
+    "test_answer": "Processed a single $12,500 transfer under solo manager approval.",
+    "ground_truth": "FAIL"
+  },
+  {
+    "id": "TC-02",
+    "policy": "Transfers above $10,000 require two-manager approval.",
+    "test_answer": "Wire of $18,000 approved jointly by Branch Manager and Operations Supervisor.",
+    "ground_truth": "PASS"
+  },
+  {
+    "id": "TC-03",
+    "policy": "Transfers above $10,000 require two-manager approval.",
+    "test_answer": "Automated pipeline cleared $8,500 standard vendor disbursement without manual review.",
+    "ground_truth": "PASS"
+  },
+  {
+    "id": "TC-04",
+    "policy": "Customer audit trails must be retained for 7 years in immutable storage.",
+    "test_answer": "Customer audit archives are stored in WORM storage with a 7-year retention lock.",
+    "ground_truth": "PASS"
+  },
+  {
+    "id": "TC-05",
+    "policy": "Customer audit trails must be retained for 7 years in immutable storage.",
+    "test_answer": "Deleted 4-year-old audit logs from primary database to reduce monthly storage costs.",
+    "ground_truth": "FAIL"
+  },
+  {
+    "id": "TC-06",
+    "policy": "Day-trading margin accounts require a minimum balance of $25,000.",
+    "test_answer": "Account approved for day-trading margin with a verified $30,000 deposit.",
+    "ground_truth": "PASS"
+  },
+  {
+    "id": "TC-07",
+    "policy": "Day-trading margin accounts require a minimum balance of $25,000.",
+    "test_answer": "Granted day-trading leverage privileges to retail account with $15,000 liquid capital.",
+    "ground_truth": "FAIL"
+  },
+  {
+    "id": "TC-08",
+    "policy": "Commercial mortgages cannot exceed 75% Loan-to-Value (LTV).",
+    "test_answer": "Issued final approval for a commercial property loan at 80% LTV.",
+    "ground_truth": "FAIL"
+  },
+  {
+    "id": "TC-09",
+    "policy": "Commercial mortgages cannot exceed 75% Loan-to-Value (LTV).",
+    "test_answer": "Counter-offered applicant with maximum debt ceiling fixed at 72% appraised LTV.",
+    "ground_truth": "PASS"
+  },
+  {
+    "id": "TC-10",
+    "policy": "Unsecured personal credit lines require a minimum FICO score of 680.",
+    "test_answer": "Approved $10,000 credit line for borrower with confirmed 620 credit score.",
+    "ground_truth": "FAIL"
+  },
+  {
+    "id": "TC-11",
+    "policy": "Third-party contractors must have account expiration dates within 90 days.",
+    "test_answer": "Configured external consultant account to expire automatically in 45 days.",
+    "ground_truth": "PASS"
+  },
+  {
+    "id": "TC-12",
+    "policy": "Third-party contractors must have account expiration dates within 90 days.",
+    "test_answer": "Provisioned vendor engineer with active Active Directory account set to never expire.",
+    "ground_truth": "FAIL"
+  },
+  {
+    "id": "TC-13",
+    "policy": "Production database access requires active ticket and multi-factor authentication.",
+    "test_answer": "Engineer accessed prod DB via terminal proxy using MFA and verified ticket INC-4410.",
+    "ground_truth": "PASS"
+  },
+  {
+    "id": "TC-14",
+    "policy": "Cash deposits over $10,000 must trigger a Currency Transaction Report (CTR).",
+    "test_answer": "Client deposited $15,000 cash; teller waived CTR filing due to executive status.",
+    "ground_truth": "FAIL"
+  },
+  {
+    "id": "TC-15",
+    "policy": "Source code repositories must never be synced to personal non-MDM hardware.",
+    "test_answer": "Developer mirrored Git repository to personal external hard drive for offline work.",
+    "ground_truth": "FAIL"
+  }
+]
