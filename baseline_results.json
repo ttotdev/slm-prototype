@@ -1,0 +1,49 @@
+{
+  "model": "llama3.2:1b-baseline",
+  "sample_size": 15,
+  "cohen_kappa": 0.348,
+  "predictions": [
+    "FAIL",
+    "PASS",
+    "PASS",
+    "PASS",
+    "FAIL",
+    "PASS",
+    "FAIL",
+    "PASS",
+    "FAIL",
+    "PASS",
+    "PASS",
+    "PASS",
+    "PASS",
+    "FAIL",
+    "PASS"
+  ],
+  "ground_truth": [
+    "FAIL",
+    "PASS",
+    "PASS",
+    "PASS",
+    "FAIL",
+    "PASS",
+    "FAIL",
+    "FAIL",
+    "PASS",
+    "FAIL",
+    "PASS",
+    "FAIL",
+    "PASS",
+    "FAIL",
+    "FAIL"
+  ],
+  "confusion_matrix": [
+    [
+      6,
+      1
+    ],
+    [
+      4,
+      4
+    ]
+  ]
+}
