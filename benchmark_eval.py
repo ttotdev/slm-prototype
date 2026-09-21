@@ -5,6 +5,14 @@ from pydantic import BaseModel, Field
 from sklearn.metrics import cohen_kappa_score, confusion_matrix
 from mlx_lm import load, generate
 
+from model_runner import ModelRegistry
+
+# Switch models effortlessly by changing the key or passing a new path
+runner = ModelRegistry.get_runner("llama-3.2-1b")
+
+# Inside your loop:
+response_str = runner.evaluate(prompt)
+
 class AuditVerdict(BaseModel):
     verdict: Literal["PASS", "FAIL"] = Field(description="PASS if faithful, FAIL if violating rules")
     rationale: str
